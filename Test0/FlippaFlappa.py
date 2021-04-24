@@ -4,13 +4,13 @@ class FlippaFloppa:
         self.b = a2
 
     def test(self, x):
-        a = x % self.a
-        b = x % self.b
-        if (a == 0 and b == 0): 
+        a = x % self.a == 0
+        b = x % self.b == 0
+        if (a and b): 
             return "FlipFlop"  
-        if (a == 0): 
+        if (a): 
             return "Flip"    
-        if (b == 0): 
+        if (b): 
             return "Flop"  
         return str (x)
     
